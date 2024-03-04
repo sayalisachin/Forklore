@@ -6,4 +6,4 @@ The platform highlights user activity with sections displaying Last Viewed Recip
 Upon clicking a specific dish, users access a detailed recipe page, which not only includes the step-by-step preparation instructions but also provides options to order the dish from nearby restaurants. 
 The ordering functionality integrates with restaurants that offer the selected recipe using Google Maps API, creating a seamless connection between recipe exploration and real-world dining experiences.
 
-This Project Is Built using HTML, CSS, JS, Node.js, and Oracle Database.
+This Project Is Built using HTML, CSS, JS, GSAP, Node.js, and Oracle Database.
