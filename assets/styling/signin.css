@@ -146,7 +146,29 @@ form.sign-in-form {
   cursor: pointer;
   transition: 0.5s;
 }
+.button {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.button:hover{
+  background-color: indianred;
 
+}
 .btn:hover {
   background-color: #4d84e2;
 }
