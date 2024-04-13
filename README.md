@@ -37,8 +37,9 @@ Forklore is a Recipe Book Database Management System built to streamline your cu
 - Visit `http://localhost/forklore` in your web browser to access Forklore.
 
 ## Contributions
-I have developed the front-end of this website. This repository works without the XAMPP server.
-Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
+- I have developed the front-end of this website. This repository works without the XAMPP server.
+- Contributions are welcome!
+- Please follow the [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
