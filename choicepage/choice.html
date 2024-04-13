@@ -28,13 +28,15 @@
           <input type="radio" name="radio" id="radio1" class="radio" value="r">
           <input type="radio" name="radio" id="radio2" class="radio" value="k">
           <input type="radio" name="radio" id="radio3" class="radio" value="t">
+          <input type="radio" name="radio" id="radio3" class="radio" value="w">
           
           <div class="ball"></div>
-        </div>
+        </div> 
         <div class="labels">
           <label for="radio1" class="label">Vegetarian</label>
           <label for="radio2" class="label">Non-Vegetarian</label>
           <label for="radio3" class="label">Vegan</label>
+          <label for="radio4" class="label">View All</label>
           
         </div>
       </div>
@@ -52,6 +54,12 @@ radios.forEach((radio, index) => {
     labels[index].classList.toggle('active');
     prevLabel = labels[index];
     ball.className = `ball pos${index}`;
+    let selectedOption = document.querySelector('input[name="radio"]:checked').value;
+            if (selectedOption === 'r') {
+                window.location.href = '../veg/veg.html';
+            } else if (selectedOption === 'k') {
+                window.location.href = '../nonveg/nonveg.html';
+            }
   });
 });
       </script>
