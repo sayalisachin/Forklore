@@ -96,4 +96,6 @@ $(document).ready(function(){
             $(this).closest('.comment').remove();
         });
     });
-    
+    $("#create").click(function() {
+      $(this).before("<textarea></textarea>");
+    });
