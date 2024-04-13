@@ -3,15 +3,29 @@ var likedRecipes = [];
 function viewLocation() {
     // Initialize the map
     var map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 }, // Default center (replace with user's location)
+        center: { lat: 13.352585, lng: 74.793579 }, // Default center (replace with user's location)
         zoom: 15 // Adjust zoom level as needed
     });
 
     // Add marker for user's location
     var marker = new google.maps.Marker({
-        position: { lat: -34.397, lng: 150.644 }, // Default position (replace with user's location)
+        position: { lat: 13.35146806608148, lng: 74.7953220781786 }, // Default position (replace with user's location)
         map: map,
         title: 'Your Location'
+    });
+    var request = {
+        location: userLocation,
+        radius: '500', // Search radius in meters
+        type: ['restaurant'] // Specify type as restaurant
+    };
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, function(results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            // Loop through the results and add a marker for each restaurant
+            for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+            }
+        }
     });
 }
 
