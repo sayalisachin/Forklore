@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+html{
+  height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color3);
+    height: 100%;
+    min-height: 100%;
+    background-color: #000000;
+}
+:root{
+  --color: #003366;
+  --color2: #f0f8ff;
+  --color3: #fff;
+  --color4: #87CEEB;
+  
+  
+}
+#map {
+  height: 400px;
+  background-color: #fff !important; /* Ensure that this background color is applied */
+}
+*{  
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--bg);
+    
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--color3); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+.header{
+    width: 100%;
+    height: 800px;
+    background-image: url('../img/Food_BG.webp');
+    background-size: cover;
+    background-position: center;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--color);
+    color: var(--color3);
+}
+
+.brand-name{
+    width: 100px;
+    height: auto;
+}
+.menu-bar ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu-bar li{
+    list-style: none;
+    margin: 0 1rem;
+}
+.menu-bar li a{
+    text-decoration: none;
+    color: var(--color3);
+    padding: 1rem;
+    display: block;
+}
+.menu-bar li:hover{
+    background-color: var(--color2);
+}
+.hamburger{
+    position: absolute;
+    top: 2.4rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--color3);
+    border-radius: 10px;
+    transition: 200ms transform ease-in;
+}
+
+.title{
+  text-align: center;
+  font-size: 5rem;
+  padding-top: 1.5rem;
+  font-weight: 600;
+  color: #d9004c;
+}
+
+.search-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 5rem;
+  background: var(--color);
+  padding: 1rem;
+  border-radius: 2rem;
+  color: var(--color3);
+  margin: 0 auto;
+  margin-top: 5rem;
+} 
+
+#search{
+  margin: 0 0.5rem 0 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: var(--color);
+  color: var(--color3);
+}
+
+#search::placeholder{
+  color: var(--bg);
+  font-size: 1rem;
+  opacity: 0.7;
+}
+.fa:hover{
+  color: var(--error);
+}
+
+.result{
+  text-align: center;
+}
+.result h1{
+  color: var(--color4);
+}
+
+
+#none{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff0505;
+  text-align: center;
+}
+.card-grid, .food-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 5px;
+    padding-top: 1rem;
+    justify-content: center;
+    overflow: auto;
+    min-height: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  
+  .card {
+    --padding: 1rem;
+    background: var(--color);
+    border: 1px solid #777;
+    border-radius: .25rem;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .card.card-shadow {
+    border: none;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .79);
+    max-width: 700px;
+    max-height: 350px;
+  }
+  
+  .card-header {
+    font-size: 1.5rem;
+    padding: var(--padding);
+    padding-bottom: 0;
+    margin-bottom: .5rem;
+  }
+  
+  .card-header.card-image {
+    padding: 0;
+    overflow: hidden;
+  }
+    
+  .card-header.card-image > img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    transition: 200ms transform ease-in-out;
+  }
+  
+  .card:hover > .card-header.card-image > img {
+    transform: scale(1.025);
+  }
+  #liked-recipes {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+  .card-body {
+    font-size: .9rem;
+    text-align: center;
+    padding: 0 var(--padding);
+  }
+  .card-body h3{
+    color: var(--color3);
+  }
+  
+  .card-footer {
+    margin-top: 1rem;
+    padding: var(--padding);
+    padding-top: 0;
+    text-align: center;
+    color: var(--color4);
+  }
+  
+  .btn {
+    background: var(--bg);
+    color: var(--color4);
+    border: 2px solid var(--color);
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .50em;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .btn:hover, .btn:focus {
+    transform: translateY(-3px);
+    background-color: transparent;
+    border: 2px solid var(--bg);
+    color: var(--color3);
+  }
+  
+.btn-like {
+    background-color: transparent;
+    color: #87CEEB;
+    border: 2px solid #87CEEB;
+}
+.btn-like.liked {
+    color: red;
+    border-color: red;
+}
+  .footer{
+    background-color: var(--color);
+    height: 150px;
+    margin-top: auto;
+    padding: 10px;
+    color: var(--color3);
+    clear: both;
+  }
+  .social-btn{
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 2rem;
+  }
+  .social-btn a{
+    color: rgb(255, 253, 253);
+  }
+  .quick-bar{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1rem;
+    padding-top:1rem ;
+  }
+  .quick-bar a{
+    color: var(--color3);
+    text-decoration: none;
+  }
+  /* CSS for Google Maps container */
+#map {
+  height: 400px;
+  background-color: #fff; /* Set a specific background color for the map */
+}
+
+/* CSS for Google Maps to maintain light theme */
+.gm-style {
+  color: #000 !important; /* Set text color to black */
+}
+
+.gm-style .gm-style-iw-c {
+  background-color: #fff !important; /* Set info window background color to white */
+}
+
+.gm-style .gm-style-iw-d {
+  color: #000 !important; /* Set info window text color to black */
+}
+
+  .footer p{
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  /* Meal Content */
+  #liked-recipes-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#liked-recipes-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: powderblue;
+    border: 1px solid paleturquoise;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+}
+
+#liked-recipes-list li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
