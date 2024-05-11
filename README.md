@@ -21,7 +21,7 @@ Forklore is a Recipe Book Database Management System built to streamline your cu
 - XAMPP
 
 ## Live Website Deployed
-Link: https://663f25281107b2ae02a0bc9b--resplendent-mermaid-1711ba.netlify.app/
+Link: https://663f27ad1107b2afa0a0bcab--tourmaline-shortbread-1bb082.netlify.app/
 
 ## Getting Started
 
